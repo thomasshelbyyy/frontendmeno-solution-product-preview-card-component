@@ -1,0 +1,125 @@
+:root {
+    /* Primary color */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral color */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cream);
+    font-family: "Montserrat";
+}
+
+.container {
+    width: 800px;
+    display: flex;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+
+.desktop-ilustration {
+    width: 50%;
+    border-radius: 8px 0 0 8px;
+}
+
+.mobile-ilustration {
+    display: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.main-content {
+    padding: 30px;
+}
+
+.subtitle {
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: var(--dark-grayish-blue);
+}
+
+.title {
+    font-family: serif;
+    font-weight: bolder;
+    font-size: 32px;
+    padding: 20px 0;
+    line-height: 1.5rem;
+    color: var(--very-dark-blue);
+
+}
+
+.description {
+    color: var(--dark-grayish-blue);
+    padding-bottom: 20px;
+}
+
+.prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    padding-bottom: 20px;
+}
+
+.discount-price {
+    font-weight: 900;
+    font-size: 32px;
+    color: var(--dark-cyan);
+}
+
+.normal-price {
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 16px;
+    background-color: var(--dark-cyan);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn:hover {
+    background-color: hsl(158, 37%, 28%);
+}
+
+.icon {
+    padding-right: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .desktop-ilustration {
+        display: none;
+    }
+
+    .mobile-ilustration {
+        display: block;
+        width: 100%;
+    }
+}
